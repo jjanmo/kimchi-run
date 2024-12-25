@@ -1,0 +1,54 @@
+# Unity generated files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Aa]sset[Ss]tore/
+
+# Unity auto-generated files
+*.cs.meta
+*.mat.meta
+*.prefab.meta
+*.unity.meta
+
+# Cache and temporary files
+Assets/**/*.cache
+Assets/**/*.tmp
+
+# Visual Studio / VSCode files
+.vscode/
+.vs/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build artifacts
+*.apk
+*.aab
+*.exe
+*.app
+*.dmg
+*.iso
+*.ipa
+*.msi
+*.psd
+*.zip
+*.tar.gz
+
+# Ignore auto-generated lighting data
+[Ll]ightmapSnapshot.asset
