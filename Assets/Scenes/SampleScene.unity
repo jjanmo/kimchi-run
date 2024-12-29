@@ -421,7 +421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minSpawnDelay: 2
-  maxSpawnDelay: 16
+  maxSpawnDelay: 6
   gameObjects:
   - {fileID: 1797991987545822086, guid: 1ad21d91446864d3aa231ed760d85f11, type: 3}
   - {fileID: 6413319212800541404, guid: bcd681225fc354e59bc0ef0b64536489, type: 3}
@@ -910,6 +910,7 @@ MonoBehaviour:
   JumpForce: 14
   PlayerRigidbody: {fileID: 821927649}
   PlayerAnimator: {fileID: 821927650}
+  PlayerCollider: {fileID: 821927648}
 --- !u!1 &858194825
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,8 +940,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5499d70140ff45aeb13339dfbcc0b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpawnDelay: 3
-  maxSpawnDelay: 9
+  minSpawnDelay: 2
+  maxSpawnDelay: 6
   gameObjects:
   - {fileID: 7684077186746272266, guid: cc02324d3efd14472b3a162629dc38da, type: 3}
   - {fileID: 7684077186746272266, guid: 419f71af104504575ad0c561220b4a35, type: 3}
