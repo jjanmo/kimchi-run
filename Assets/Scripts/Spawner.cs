@@ -12,7 +12,7 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
-        Invoke("Spawn", 1f);
+        Invoke("Spawn", Random.Range(minSpawnDelay, maxSpawnDelay));
     }
 
     void Spawn()
