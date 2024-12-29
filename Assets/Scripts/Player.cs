@@ -4,13 +4,12 @@ public class Player : MonoBehaviour
 {
     [Header("Settings")]
     public float JumpForce;
-
-    private bool _isGrounded = true;
-
     [Header("References")]
     public Rigidbody2D PlayerRigidbody;
-
     public Animator PlayerAnimator;
+
+    private bool isGrounded = true;
+
     void Start()
     {
 
@@ -18,22 +17,24 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             PlayerRigidbody.AddForceY(JumpForce, ForceMode2D.Impulse);
-            _isGrounded = false;
-        }
-        if (!_isGrounded && PlayerRigidbody.linearVelocityY == 0)
-        {
-            _isGrounded = true;
+            isGrounded = false;
+            PlayerAnimator.SetInteger("state", 1);
         }
     }
 
-    void onClollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "Platform")
         {
-            _isGrounded = true;
+            if (!isGrounded)
+            {
+                PlayerAnimator.SetInteger("state", 2);
+
+            }
+            isGrounded = true;
         }
     }
 }
