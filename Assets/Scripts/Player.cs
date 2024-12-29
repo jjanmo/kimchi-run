@@ -3,12 +3,14 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [Header("Settings")]
-    public float jumpForce;
+    public float JumpForce;
 
-    private bool isGrounded = true;
+    private bool _isGrounded = true;
 
     [Header("References")]
-    public Rigidbody2D playerRigidbody;
+    public Rigidbody2D PlayerRigidbody;
+
+    public Animator PlayerAnimator;
     void Start()
     {
 
@@ -16,14 +18,14 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
         {
-            playerRigidbody.AddForceY(jumpForce, ForceMode2D.Impulse);
-            isGrounded = false;
+            PlayerRigidbody.AddForceY(JumpForce, ForceMode2D.Impulse);
+            _isGrounded = false;
         }
-        if (!isGrounded && playerRigidbody.linearVelocityY == 0)
+        if (!_isGrounded && PlayerRigidbody.linearVelocityY == 0)
         {
-            isGrounded = true;
+            _isGrounded = true;
         }
     }
 
@@ -31,7 +33,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.name == "Platform")
         {
-            isGrounded = true;
+            _isGrounded = true;
         }
     }
 }

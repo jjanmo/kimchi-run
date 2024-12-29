@@ -4,10 +4,10 @@ public class BackgroundScroll : MonoBehaviour
 {
     [Header("Settings")]
     [Tooltip("The speed of the scrolling")]
-    public float scrollSpeed;
+    public float ScrollSpeed;
 
     [Header("References")]
-    public MeshRenderer meshRenderer;
+    public MeshRenderer MeshRenderer;
 
     void Start()
     {
@@ -16,6 +16,6 @@ public class BackgroundScroll : MonoBehaviour
 
     void Update()
     {
-        meshRenderer.material.mainTextureOffset += new Vector2(scrollSpeed * Time.deltaTime, 0);
+        MeshRenderer.material.mainTextureOffset += new Vector2(ScrollSpeed * Time.deltaTime, 0);
     }
 }
